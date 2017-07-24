@@ -1,0 +1,25 @@
+server {
+    listen 80;
+    server_name www.app.dev;
+    root /var/www/sf4/public;
+
+    location / {
+        try_files $uri /index.php$is_args$args;
+    }
+
+    location ~* \.(jpg|jpeg|gif|css|png|js|ico|html|eof|woff|ttf)$ {
+        if (-f $request_filename) {
+            expires 30d;
+            access_log off;
+        }
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass aya_app:9000;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    error_log /var/log/nginx/sf4_error.log;
+    access_log /var/log/nginx/sf4_access.log;
+}

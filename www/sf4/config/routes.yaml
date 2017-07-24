@@ -1,0 +1,3 @@
+index:
+    path: /hello/{name}
+    defaults: { _controller: 'App\Controller\AppController::indexAction' }

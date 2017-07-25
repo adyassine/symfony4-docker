@@ -29,7 +29,7 @@ $ sudo vi /etc/hosts  # add 127.0.0.1 www.app.dev
 To preview the demo :
 
 ```bash
-http://www.app.dev/ # or http://www.app.dev:[YOUR_PORT]/ 
+http://www.app.dev/hello/demo # or http://www.app.dev:[YOUR_PORT]/hello/demo
 ```
 
 SSH on aya_app container :

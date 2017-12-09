@@ -10,7 +10,7 @@ First, clone the repo
 
 ```bash
 $ git clone repo
-$ cd symfony4
+$ cd symfony4-docker
 ```
 
 ## Setup

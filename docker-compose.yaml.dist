@@ -11,7 +11,7 @@ services:
         - "./.docker/config/nginx/vhost/sf4_vhost:/etc/nginx/conf.d/030-sf4.conf:ro"
 
     aya_app:
-      build: .
+      build: .docker
       links:
         - aya_mariadb
         - aya_elasticsearch
